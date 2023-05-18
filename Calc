@@ -1,1 +1,16 @@
+def calculator(expression):
+    try:
+        result = eval(expression)
+        return result
+    except Exception as e:
+        return "Ошибка: " + str(e)
 
+
+while True:
+    expression = input("Введите математическое выражение (для выхода введите 'exit'): ")
+
+    if expression.lower() == 'exit':
+        break
+
+    result = calculator(expression)
+    print("Результат:", result)
